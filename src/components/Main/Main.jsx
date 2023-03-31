@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Articles from '../Articles/Articles';
 import Blogs from '../Blogs/Blogs';
 import SideBar from '../SideBar/SideBar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
     const [blogs, setBlogs] = useState([]);
     const [readTime, setReadTime] = useState(0);
+    const [bookmarked, setBookmarked] = useState([]);
     useEffect(()=>{
         fetch('blogs.json')
         .then(res => res.json())
@@ -18,11 +21,12 @@ const Main = () => {
         setReadTime(totalTime);
     }
     const clickHandelerBookMarked = (name) =>{
-        console.log(name);
+        bookmarked.includes(name) ? toast("Wow so easy!") : setBookmarked([...bookmarked, name]);
     }
-    console.log(readTime);
+    console.log(bookmarked);
     return (
         <div className='container mx-auto md:flex justify-between gap-5'>
+            <ToastContainer />
             <div className='md:w-3/4'>
                 <Blogs 
                     blogs={blogs} 
