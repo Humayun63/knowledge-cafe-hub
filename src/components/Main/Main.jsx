@@ -21,7 +21,7 @@ const Main = () => {
         setReadTime(totalTime);
     }
     const clickHandelerBookMarked = (name) =>{
-        bookmarked.includes(name) ? toast("Wow so easy!") : setBookmarked([...bookmarked, name]);
+        bookmarked.includes(name) ? toast("You Have Already Bookmarked This Blog!") : setBookmarked([...bookmarked, name]);
     }
     console.log(bookmarked);
     return (
