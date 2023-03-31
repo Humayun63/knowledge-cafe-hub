@@ -10,7 +10,7 @@ const SingleArticle = ({ article }) => {
             </p>
             {
                 // console.log(article?.uses)
-                article?.uses && article.uses.map(item => <li className='px-3 mb-1'>{item}</li>)
+                article?.uses && article.uses.map(item => <li className='px-3 mb-1' key={item}>{item}</li>)
             }
         </article>
     );

@@ -23,7 +23,6 @@ const Main = () => {
     const clickHandelerBookMarked = (name) =>{
         bookmarked.includes(name) ? toast("You Have Already Bookmarked This Blog!") : setBookmarked([...bookmarked, name]);
     }
-    console.log(bookmarked);
     return (
         <div className='container mx-auto md:flex justify-between gap-5'>
             <ToastContainer />

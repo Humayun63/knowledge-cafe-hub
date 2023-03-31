@@ -9,7 +9,6 @@ const Articles = () => {
         .then(articles => setArticles(articles))
         .catch(err => console.log(err))
     }, [])
-    console.log(articles);
     return (
         <div className='my-8'>
             <h2 className='font-bold text-2xl text-center my-8'>Question and Answer Blog</h2>
