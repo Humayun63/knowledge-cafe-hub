@@ -12,7 +12,7 @@
     {
         "id": "qna3",
         "title": "Purpose of useEffect other than fetching data",
-        "description": "There are some uses of useEffect hook in React other than fetching data. Like: 1. Validating input field. 2.Live filtering. 3. Trigger animation on new array value. 4. Updating the document title. 5. Adding and removing event listeners. 6. Cleaning up resources.",
+        "description": "There are some uses of useEffect hook in React other than fetching data. Like: ",
         "uses": [
             "Validating input field",
             "Live filtering",
