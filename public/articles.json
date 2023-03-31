@@ -1,0 +1,30 @@
+[
+    {
+        "id": "qna1",
+        "title": "Differences between props and state",
+        "description": "Both are plain JS object and can contain default values. But in case of differences, the State is mutable but Props is immutable. This Means State can be changed by the setState inbuild function but Props can not be changed. Props are read-only and State changes can be asynchronous. Props are used to communicate between components but State can be used for rendering dynamic changes with the component. Props is passed from one component to another but State is a local data storage that is local to the component only and cannot be passed to other components. "
+    },
+    {
+        "id": "qna2",
+        "title": "How does useState work?",
+        "description": "In react, 'useState' is a hook that returns an array that has two elements. One is the current state value and the other one is build-in function to update the state. The useState hook takes an arguments as an initial value of the state. Every time the function of the state (i.e setState) is called it updates the state value."
+    },
+    {
+        "id": "qna3",
+        "title": "Purpose of useEffect other than fetching data",
+        "description": "There are some uses of useEffect hook in React other than fetching data. Like: 1. Validating input field. 2.Live filtering. 3. Trigger animation on new array value. 4. Updating the document title. 5. Adding and removing event listeners. 6. Cleaning up resources.",
+        "uses": [
+            "Validating input field",
+            "Live filtering",
+            "Trigger animation on new array value",
+            "Updating the document title",
+            "Adding and removing event listeners",
+            "Cleaning up resources"
+        ]
+    },
+    {
+        "id": "qna4",
+        "title": "How does react work?",
+        "description": "React is a JavaScript library for building UI and focuses on performance and simplicity. React works by creating virtual DOM. At first, it creates a virtual dom tree that is similar to the actual dom but more lightweight than that. That's why it can render faster than actual dom. When something occurs on the page (i.e button clicks) then it compares the current virtual dom and the previous one to find out what is changed. Then it updates only those elements in the actual dom. Thus it saves data and re-loading the page multiple times. React transfers data from top to bottom (uni-directional data flow), from parent to child. It helps to trace data. In short, React updates things where to be updated. "
+    }
+]
