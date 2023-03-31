@@ -5,23 +5,27 @@ import SideBar from '../SideBar/SideBar';
 
 const Main = () => {
     const [blogs, setBlogs] = useState([]);
+    const [readTime, setReadTime] = useState(0);
     useEffect(()=>{
         fetch('blogs.json')
         .then(res => res.json())
         .then(blogs => setBlogs(blogs))
         .catch(err => console.log(err));
     }, [])
-    const clickHandeler = (time) =>{
-        console.log(time);
+    const clickHandelerTime = (time) =>{
+        const newTime = parseFloat(time);
+        const totalTime = readTime + newTime;
+        setReadTime(totalTime);
     }
+    console.log(readTime);
     return (
         <div className='container mx-auto md:flex justify-between gap-5'>
             <div className='md:w-3/4'>
-                <Blogs blogs={blogs} clickHandeler={clickHandeler}/>
+                <Blogs blogs={blogs} clickHandelerTime={clickHandelerTime}/>
                 <Articles />
             </div>
             <div className='md:w-1/4'>
-                <SideBar />
+                <SideBar readTime={readTime} />
             </div>
         </div>
     );

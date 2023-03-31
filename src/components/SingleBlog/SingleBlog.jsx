@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
-const SingleBlog = ({ blog, clickHandeler }) => {
+const SingleBlog = ({ blog, clickHandelerTime }) => {
     const { authorImg, authorName, blogImg, blogTitle: blogTitle, publishDate, readTime, tags } = blog;
     return (
         <div className='border-b-2 mb-8 p-4'>
@@ -19,7 +19,7 @@ const SingleBlog = ({ blog, clickHandeler }) => {
                 </div>
                 <p className='text-slate-400 text-xl'>
                     {readTime} min read
-                    <span className='ms-2 cursor-pointer' onClick={()=>clickHandeler(readTime)}> <FontAwesomeIcon icon={faBookmark} /></span>
+                    <span className='ms-2 cursor-pointer'> <FontAwesomeIcon icon={faBookmark} /></span>
                 </p>
             </div>
             <h2 className='font-bold text-4xl mb-4'>{blogTitle}</h2>
@@ -30,7 +30,7 @@ const SingleBlog = ({ blog, clickHandeler }) => {
                     ))
                 }
             </p>
-            <button className='mt-4 font-medium underline text-lg text-cyan-400'>Mark as read</button>
+            <button className='mt-4 font-medium underline text-lg text-cyan-400' onClick={()=>clickHandelerTime(readTime)}>Mark as read</button>
         </div>
     );
 };

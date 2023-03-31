@@ -1,10 +1,10 @@
 import React from 'react';
 import SingleBlog from '../SingleBlog/SingleBlog';
 
-const Blogs = ({blogs, clickHandeler}) => {
+const Blogs = ({blogs, clickHandelerTime}) => {
     return (
         <div>
-           {blogs.map(blog =>  <SingleBlog blog={blog} clickHandeler={clickHandeler}/>)}
+           {blogs.map(blog =>  <SingleBlog blog={blog} clickHandelerTime={clickHandelerTime}/>)}
         </div>
     );
 };
