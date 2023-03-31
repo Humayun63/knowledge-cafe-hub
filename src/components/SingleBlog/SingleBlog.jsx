@@ -7,29 +7,31 @@ const SingleBlog = ({ blog }) => {
     console.log(blogImg);
     return (
         <div className='border-b-2 mb-8 p-4'>
-            <img src={blogImg} alt="Blog Image" />
-            <div>
-                <div>
-                    <img src={authorImg} alt="Author Image" />
+            <img src={blogImg} alt="Blog Image" className='h-96 w-full rounded' />
+            <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-4 my-4'>
+                    <div className='h-16 w-16 p-2 rounded-full'>
+                        <img src={authorImg} alt="Author Image" className='w-full h-full rounded-full'/>
+                    </div>
                     <div>
-                        <h4>{authorName}</h4>
-                        <p>{publishDate}</p>
+                        <h4 className='font-bold text-2xl mb-1'>{authorName}</h4>
+                        <p className='font-semibold text-slate-400 text-xs'>{publishDate}</p>
                     </div>
                 </div>
-                <p>
+                <p className='text-slate-400 text-xl'>
                     {readTime} min read
-                    <span> <FontAwesomeIcon icon={faBookmark} /></span>
+                    <span className='ms-2 cursor-pointer'> <FontAwesomeIcon icon={faBookmark} /></span>
                 </p>
             </div>
-            <h2>{blogTitle}</h2>
+            <h2 className='font-bold text-4xl mb-4'>{blogTitle}</h2>
             <p>
                 {
                     tags.map(tag => (
-                        <span>#{tag} </span>
+                        <span className='text-slate-400 text-lg'>#{tag} </span>
                     ))
                 }
             </p>
-            <button>Mark as read</button>
+            <button className='mt-4 font-medium underline text-lg text-cyan-400'>Mark as read</button>
         </div>
     );
 };
