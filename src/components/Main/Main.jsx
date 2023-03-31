@@ -17,11 +17,18 @@ const Main = () => {
         const totalTime = readTime + newTime;
         setReadTime(totalTime);
     }
+    const clickHandelerBookMarked = (name) =>{
+        console.log(name);
+    }
     console.log(readTime);
     return (
         <div className='container mx-auto md:flex justify-between gap-5'>
             <div className='md:w-3/4'>
-                <Blogs blogs={blogs} clickHandelerTime={clickHandelerTime}/>
+                <Blogs 
+                    blogs={blogs} 
+                    clickHandelerTime={clickHandelerTime} 
+                    clickHandelerBookMarked={clickHandelerBookMarked} 
+                />
                 <Articles />
             </div>
             <div className='md:w-1/4'>
