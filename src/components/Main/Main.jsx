@@ -36,7 +36,7 @@ const Main = () => {
                 <Articles />
             </div>
             <div className='md:w-1/4'>
-                <SideBar readTime={readTime} />
+                <SideBar readTime={readTime} bookmarked={bookmarked} />
             </div>
         </div>
     );

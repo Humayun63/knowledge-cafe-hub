@@ -26,7 +26,7 @@ const SingleBlog = ({ blog, clickHandelerTime, clickHandelerBookMarked }) => {
             <p>
                 {
                     tags.map(tag => (
-                        <span className='text-slate-400 text-lg'>#{tag} </span>
+                        <span className='text-slate-400 text-lg' key={tag}>#{tag} </span>
                     ))
                 }
             </p>
