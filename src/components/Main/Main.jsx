@@ -11,11 +11,13 @@ const Main = () => {
         .then(blogs => setBlogs(blogs))
         .catch(err => console.log(err));
     }, [])
-    console.log(blogs);
+    const clickHandeler = (time) =>{
+        console.log(time);
+    }
     return (
         <div className='container mx-auto md:flex justify-between gap-5'>
             <div className='md:w-3/4'>
-                <Blogs blogs={blogs}/>
+                <Blogs blogs={blogs} clickHandeler={clickHandeler}/>
                 <Articles />
             </div>
             <div className='md:w-1/4'>
